@@ -73,14 +73,18 @@ GET http://localhost:3000/filmes
 ```json
 [
   {
-    "titulo": "Matrix",
-    "orcamento": "$165 milhões",
-    "bilheteria": "$463 milhões"
-  },
-  {
-    "titulo": "Interestelar",
-    "orcamento": "$165 milhões",
-    "bilheteria": "$677 milhões"
+    "titulo": "O Poderoso Chefão",
+    "ano": 1972,
+    "diretor": "Francis Ford Coppola",
+    "genero": [
+        "Crime",
+        "Drama"
+    ],
+    "duracaoSegundos": 10500,
+    "notaIMDb": "9.2",
+    "lucro": "$239 milhões",
+    "maiorPremiacao": "Oscar de Melhor Filme",
+    "sinopse": "Um chefão da máfia tenta transferir o controle de seu império clandestino para seu filho relutante."
   }
 ]
 ```
