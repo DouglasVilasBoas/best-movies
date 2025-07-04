@@ -181,13 +181,19 @@ convertNumberToString(2000000) // "$2 milhões"
 
 ## Como Estruturei Meu Projeto
 
-O primeiro passo foi criar o arquivo do servidor e instalar as dependências, que foram o Fastify e o Axios. Também criei uma pasta separada para cada parte do projeto, como por exemplo: usecase para a regra de negócio, external para a conexão com a API de filmes e routes para organizar as rotas.
-Comecei configurando o servidor para garantir que a rota estivesse funcionando direitinho. Depois disso, fui montando os arquivos aos poucos: primeiro o index do controller, depois o das rotas e, em seguida, o da pasta useCases.
-Quando cheguei na parte de implementar a regra de negócio, fui olhando os campos do payload no teste, pensando na lógica que precisava aplicar e então codava. Os campos como “título”, “ano”, “diretor”, “gênero”, “duraçãoSegundos” e “notaIMDb” foram mais tranquilos de implementar. Tive algumas dúvidas sobre qual método usar em alguns momentos, mas pesquisei e consegui resolver rapidinho.
-A parte mais complicada foi calcular o lucro, porque precisei converter uma string para número pra fazer a conta, e depois converter de volta pra string. Pra isso, precisei usar regex. Eu já tinha usado regex antes, mas só em exemplos mais simples, então não lembrava muito bem como fazer. E nesse caso, ele ficou um pouco mais complexo porque precisei colocar várias condições dentro.
-Fui pesquisando e pedindo exemplos pro Copilot. Deu um pouco de trabalho, mas no fim consegui resolver.
-Já para a parte do “maiorPremiação”, foi bem mais tranquilo e usei o método sort. E na “sinopse”, só precisei usar uma condição com if e else.
-Por fim, percebi que seria bom esconder a URL da API, então instalei a dependência dotenv e criei um arquivo .env pra guardar esse valor, evitando expor essa informação quando fosse subir o código pro GitHub.
+> O primeiro passo foi criar o arquivo do servidor e instalar as dependências, que foram o Fastify e o Axios. Também criei uma pasta separada para cada parte do projeto, como por exemplo: `usecase` para a regra de negócio, `external` para a conexão com a API de filmes e `routes` para organizar as rotas.
+>
+> Comecei configurando o servidor para garantir que a rota estivesse funcionando direitinho. Depois disso, fui montando os arquivos aos poucos: primeiro o `index` do controller, depois o das rotas e, em seguida, o da pasta `useCases`.
+>
+> Quando cheguei na parte de implementar a regra de negócio, fui olhando os campos do payload no teste, pensando na lógica que precisava aplicar e então codava. Os campos como “título”, “ano”, “diretor”, “gênero”, “duraçãoSegundos” e “notaIMDb” foram mais tranquilos de implementar. Tive algumas dúvidas sobre qual método usar em alguns momentos, mas pesquisei e consegui resolver rapidinho.
+>
+> A parte mais complicada foi calcular o lucro, porque precisei converter uma string para número pra fazer a conta, e depois converter de volta pra string. Pra isso, precisei usar regex. Eu já tinha usado regex antes, mas só em exemplos mais simples, então não lembrava muito bem como fazer. E nesse caso, ele ficou um pouco mais complexo porque precisei colocar várias condições dentro.
+>
+> Fui pesquisando e pedindo exemplos pro Copilot. Deu um pouco de trabalho, mas no fim consegui resolver.
+>
+> Já para a parte do “maiorPremiação”, foi bem mais tranquilo e usei o método sort. E na “sinopse”, só precisei usar uma condição com if e else.
+>
+> Por fim, percebi que seria bom esconder a URL da API, então instalei a dependência dotenv e criei um arquivo `.env` pra guardar esse valor, evitando expor essa informação quando fosse subir o código pro GitHub.
 
 
 
